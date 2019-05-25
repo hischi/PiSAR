@@ -30,11 +30,11 @@ Part of Standard Release:   4.3.1
 
 #define P2VAR(ptrtype, memclass, ptrclass) ptrtype *                /* SWS_COMPILER_00006 */
 
-#define P2CONST(ptrtype, memclass, ptrclass) (const ptrtype) *      /* SWS_COMPILER_00013 */
+#define P2CONST(ptrtype, memclass, ptrclass) const ptrtype *      /* SWS_COMPILER_00013 */
 
-#define CONSTP2VAR (ptrtype, memclass, ptrclass) const (ptrtype *)  /* SWS_COMPILER_00031 */
+#define CONSTP2VAR(ptrtype, memclass, ptrclass)  ptrtype * const  /* SWS_COMPILER_00031 */
 
-#define CONSTP2CONST(ptrtype, memclass, ptrclass) const (const ptrtype *)   /* SWS_COMPILER_00032 */
+#define CONSTP2CONST(ptrtype, memclass, ptrclass) const ptrtype * const   /* SWS_COMPILER_00032 */
 
 #define P2FUNC(rettype, ptrclass, fctname) rettype (*fctname)       /* SWS_COMPILER_00039 */
 
